@@ -1,11 +1,12 @@
-/* CSS */
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url(https://cdn.pixabay.com/photo/2015/01/31/05/05/background-618226_1280.png);
+    background-image: url('C:/Users/Kalielsinho/Desktop/Progamacion_web/Proyecto/img/back_con_fondo.jpg'); /* Ruta absoluta a la imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
+
 
 .Primer_tit {
     text-align: center;
@@ -44,15 +45,68 @@ body {
     transform: scale(1.1);
 }
 
-.carousel {
-    margin-top: 50px;
+/* Estilos para los contenedores de carrusel */
+.carousel-container {
+    margin: 20px;
+    float: left; /* Alinea los contenedores uno al lado del otro */
+    width: calc(50% - 40px); /* Establece el ancho de cada contenedor al 50% del ancho de la pantalla, menos el margen */
+    height: 400px; /* Ajusta la altura deseada */
+    overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
 }
 
-.carousel-item img {
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Estilos para las imágenes del carrusel */
+.carousel-container .carousel-item img {
+    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+    height: auto;
+    display: block;
+    margin: 0 auto;
 }
 
-.navbar-brand img {
-    margin-right: 5px;
+/* Estilos para el carrusel */
+.carousel-container .carousel {
+    background-color: white; /* Fondo blanco para que las imágenes con fondo blanco se vean mejor */
+    border: 2px solid black; /* Borde de 2 píxeles de grosor y color negro */
+    padding: 0; /* Eliminar el padding para que el borde esté pegado a la imagen */
+    max-width: 100%; /* Ajusta el ancho máximo del carrusel al 100% del contenedor */
+    height: 100%; /* Ajusta la altura del carrusel al 100% del contenedor */
+}
+
+/* Estilos para invertir el color de las flechas del carrusel */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(100%);
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* La altura del contenedor ocupa toda la pantalla */
+}
+
+.texto {
+    flex: 1; /* El texto ocupará el 50% del ancho */
+}
+
+.imagenes {
+    flex: 1; /* Las imágenes ocuparán el 50% del ancho */
+    display: flex;
+    justify-content: center; /* Centra la grilla horizontalmente */
+    align-items: center; /* Centra la grilla verticalmente */
+}
+
+.grid-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+.grid-item {
+    margin: 10px;
 }
