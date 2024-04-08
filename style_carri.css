@@ -1,0 +1,62 @@
+body {
+    background-image: url(https://cdn.pixabay.com/photo/2015/01/31/05/05/background-618226_1280.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Para ocupar toda la altura de la ventana */
+    background-color: #f0f0f0; /* Color de fondo */
+
+}
+
+
+.contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea los elementos en el centro horizontalmente */
+    align-items: flex-start; /* Alinea los elementos arriba */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para el contenedor */
+}
+
+.contenedor div {
+    width: 200px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+.contenedor img {
+    width: 50%;
+    height: auto;
+}
+
+.informacion button {
+    margin-top: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.informacion button:hover {
+    background-color: #0056b3;
+}
+
+.carrito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+}
+
+#header {
+    position: relative;
+    padding: 20px;
+    text-align: center;
+}
