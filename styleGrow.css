@@ -1,12 +1,10 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('C:/Users/Kalielsinho/Desktop/Progamacion_web/Proyecto/img/back_con_fondo.jpg'); /* Ruta absoluta a la imagen */
+    background-image: url('img/back_con_fondo.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
-
-
 
 .Primer_tit {
     text-align: center;
@@ -48,27 +46,22 @@ body {
 /* Estilos para los contenedores de carrusel */
 .carousel-container {
     margin: 20px;
-    float: left; /* Alinea los contenedores uno al lado del otro */
-    width: calc(50% - 40px); /* Establece el ancho de cada contenedor al 50% del ancho de la pantalla, menos el margen */
-    height: 400px; /* Ajusta la altura deseada */
-    overflow: hidden; /* Oculta el contenido que se desborda del contenedor */
+    float: left;
+    width: calc(50% - 40px);
+    height: 400px;
+    overflow: hidden;
+    border-bottom: 2px solid black; /* Agregar borde inferior */
+    border-top: 2px solid black; 
+    border-left: 2px solid black;
+    border-right: 2px solid black;
 }
 
 /* Estilos para las imágenes del carrusel */
 .carousel-container .carousel-item img {
-    max-width: 100%; /* Ajusta el ancho máximo de las imágenes */
+    max-width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
-}
-
-/* Estilos para el carrusel */
-.carousel-container .carousel {
-    background-color: white; /* Fondo blanco para que las imágenes con fondo blanco se vean mejor */
-    border: 2px solid black; /* Borde de 2 píxeles de grosor y color negro */
-    padding: 0; /* Eliminar el padding para que el borde esté pegado a la imagen */
-    max-width: 100%; /* Ajusta el ancho máximo del carrusel al 100% del contenedor */
-    height: 100%; /* Ajusta la altura del carrusel al 100% del contenedor */
 }
 
 /* Estilos para invertir el color de las flechas del carrusel */
@@ -77,27 +70,64 @@ body {
     filter: invert(100%);
 }
 
+.transparent-box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: -190px; /* Ajuste para que sea más alto */
+    width: calc(60% - 50px); /* Ancho ajustado */
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid black;
+    margin-top: 287px; /* Ajuste de la distancia hacia abajo */
+    margin-left: auto; /* Alinear a la derecha */
+    margin-right: 25px; /* Mismo margen que el carrusel */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+}
+
+.transparent-box p {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    margin-right: 10px; /* Margen a la derecha del texto */
+}
+
+.transparent-box img {
+    margin-right: auto; /* Mover la imagen hacia la izquierda */
+    margin-left: 0; /* Alinear la imagen a la izquierda */
+    display: block; /* Hacer que la imagen sea un bloque */
+    margin-right: 10px; /* Margen a la derecha de la imagen */
+}
+
+
+
 .container {
     display: flex;
-    height: 100vh; /* La altura del contenedor ocupa toda la pantalla */
+    height: 100vh;
 }
 
 .texto {
-    flex: 1; /* El texto ocupará el 50% del ancho */
+    flex: 1;
 }
 
 .imagenes {
-    flex: 1; /* Las imágenes ocuparán el 50% del ancho */
+    flex: 1;
     display: flex;
-    justify-content: center; /* Centra la grilla horizontalmente */
-    align-items: center; /* Centra la grilla verticalmente */
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-wrapper {
+    margin-left: 150px;
+    margin-right: 100px;
 }
 
 .grid-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     flex-wrap: wrap;
+    margin-right: 100px;
 }
 
 .column {
@@ -110,3 +140,11 @@ body {
 .grid-item {
     margin: 10px;
 }
+
+.text-end {
+    text-align: right; /* Alinea el texto a la derecha */
+    margin-right: 240px; /* Aplica un margen de 150px en el lado derecho */
+    font-family: 'Arial', sans-serif;
+}
+
+
