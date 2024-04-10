@@ -71,3 +71,13 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+h2 {
+    font-size: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: #333;
+    border: 1px solid #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px #fff;
+}

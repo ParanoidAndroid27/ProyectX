@@ -11,6 +11,9 @@ body {
     color: #343a40;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 2em; /* Tamaño más grande para mayor impacto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra para profundidad */
+    letter-spacing: 1.5px; /* Espaciado entre letras */
 }
 
 .grid-container {
@@ -47,23 +50,25 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    bottom: -190px; /* Ajuste para que sea más alto */
-    width: calc(60% - 50px); /* Ancho ajustado */
+    bottom: -190px;
+    width: calc(60% - 50px);
     background-color: rgba(255, 255, 255, 0.5);
     border: 2px solid black;
-    margin-top: 287px; /* Ajuste de la distancia hacia abajo */
-    margin-left: auto; /* Alinear a la derecha */
-    margin-right: 25px; /* Mismo margen que el carrusel */
+    margin-top: 287px;
+    margin-left: 59px; /* Margen agregado a la izquierda */
+    margin-right: 25px;
     display: flex;
-    align-items: center; /* Centrar verticalmente */
+    align-items: center;
+    padding-left: 20px; /* Padding adicional para el texto dentro del box */
 }
 
 .transparent-box p {
     font-size: 18px;
     color: #333;
     font-weight: bold;
-    margin-right: 10px; /* Margen a la derecha del texto */
+    margin-right: 10px;
 }
+
 
 .transparent-box img {
     margin-right: auto; /* Mover la imagen hacia la izquierda */
@@ -108,29 +113,45 @@ body {
     margin: 10px;
 }
 
-.text-end {
-    text-align: right; /* Alinear a la derecha */
+.text-end.mb-4 {
+    font-weight: bold;
+    color: #343a40;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-right: 100px; /* Asegúrate de que no haya otro CSS que sobrescriba esto */
+    display: block; /* Esto asegura que el elemento pueda recibir margen */
 }
 
 
-.carrusel-container {
-    max-width: 600px; /* Define el ancho máximo del carrusel */
-    max-height: 800px;
-    margin: auto; /* Centra el carrusel horizontalmente */
-    border-top: 2px black;
-    border-bottom: 2px black;
-    border-left: 2px black;
-    border-right: 2px black;
+.carruseles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.carrusel {
+    flex: 1;
+    max-width: 700px;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
 }
 
 .carousel-inner {
-    text-align: center; /* Alinea las imágenes al centro del carrusel */
+    text-align: center;
 }
 
 .carousel-item img {
-    max-width: 600px; /* Define el ancho máximo de las imágenes */
-    max-height: 400px; /* Define la altura máxima de las imágenes */
-    width: auto; /* Ajusta automáticamente el ancho de la imagen para mantener la proporción */
-    height: auto; /* Ajusta automáticamente la altura de la imagen para mantener la proporción */
-    margin: auto; /* Centra la imagen horizontalmente */
+    max-width: 100%;
+    max-height: 400px;
+    width: auto;
+    height: auto;
+    margin: auto;
+    transition: transform 0.5s ease;
 }
+
+.carousel-item img:hover {
+    transform: scale(1.05);
+}
+
