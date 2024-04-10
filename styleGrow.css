@@ -43,33 +43,6 @@ body {
     transform: scale(1.1);
 }
 
-/* Estilos para los contenedores de carrusel */
-.carousel-container {
-    margin: 20px;
-    float: left;
-    width: calc(50% - 40px);
-    height: 400px;
-    overflow: hidden;
-    border-bottom: 2px solid black; /* Agregar borde inferior */
-    border-top: 2px solid black; 
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-}
-
-/* Estilos para las imágenes del carrusel */
-.carousel-container .carousel-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-/* Estilos para invertir el color de las flechas del carrusel */
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(100%);
-}
-
 .transparent-box {
     position: absolute;
     top: 0;
@@ -98,8 +71,6 @@ body {
     display: block; /* Hacer que la imagen sea un bloque */
     margin-right: 10px; /* Margen a la derecha de la imagen */
 }
-
-
 
 .container {
     display: flex;
@@ -142,9 +113,4 @@ body {
 }
 
 .text-end {
-    text-align: right; /* Alinea el texto a la derecha */
-    margin-right: 240px; /* Aplica un margen de 150px en el lado derecho */
-    font-family: 'Arial', sans-serif;
-}
-
-
+    text-align: right; /* Alin
