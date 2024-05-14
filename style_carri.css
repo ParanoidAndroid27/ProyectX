@@ -4,7 +4,7 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
-    background-image: url('C:/Users/Kalielsinho/Desktop/Progamacion_web/Proyecto/img/back_con_fondo.jpg'); /* Ruta absoluta a la imagen */
+    background-image: url('img/back_con_fondo copy.jpg'); /* Ruta absoluta a la imagen */
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

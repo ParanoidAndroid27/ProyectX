@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Productos - Smokeshop</title>
+</head>
+
+<body>
+  <h1>Catálogo de Productos</h1>
+  <div id="productList"></div>
+
+  <script>
+    // Función para obtener la lista de cepas de Leafly
+    async function getProductList() {
+      try {
+        // Realizar la solicitud a la API de Leafly
+        const response = await fetch('https://strainapi.evanbusse.com/NB0FD6W/strains/search/all');
+        const data = await response.json();
+
+        // Obtener la lista de cepas y mostrarla en la página
+        const productList = document.getElementById('productList');
+        for (const [strain, details] of Object.entries(data)) {
+          const { race, flavors, effects } = details;
+          const productItem = document.createElement('div');
+          productItem.innerHTML = `
+            <h2>${strain}</h2>
+            <p>Raza: ${race}</p>
+            <p>Sabores: ${flavors.join(', ')}</p>
+            <p>Efectos: ${effects.join(', ')}</p>
+          `;
+          productList.appendChild(productItem);
+        }
+      } catch (error) {
+        console.error('Error al obtener la lista de productos:', error);
+      }
+    }
+
+    // Llamar a la función para obtener la lista de cepas al cargar la página
+    getProductList();
+  </script>
+</body>
+
+</html>
